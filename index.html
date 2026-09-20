@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras con Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="row">
+            
+            <!-- Columna Izquierda: Productos -->
+            <div class="col-md-7">
+                <h2 class="mb-4">Tienda de Cursos</h2>
+                <div class="row g-3"> <!-- g-3 da espaciado entre las tarjetas -->
+                    
+                    <!-- Producto 1 -->
+                    <div class="col-sm-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Curso de React</h5>
+                                <p class="card-text fs-4 text-primary fw-bold">$50</p>
+                                <button class="btn btn-success w-100 btn-agregar" data-nombre="Curso de React" data-precio="50">
+                                    Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Producto 2 -->
+                    <div class="col-sm-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Curso de n8n</h5>
+                                <p class="card-text fs-4 text-primary fw-bold">$40</p>
+                                <button class="btn btn-success w-100 btn-agregar" data-nombre="Curso de n8n" data-precio="40">
+                                    Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Carrito -->
+            <div class="col-md-5">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h2 class="card-title mb-4">Tu Carrito</h2>
+                        
+                        <!-- Tabla estilizada con Bootstrap -->
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Precio</th>
+                                        <th>Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cuerpo-carrito"></tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <h4 class="m-0">Total a Pagar:</h4>
+                            <!-- Badge (etiqueta) de Bootstrap para destacar el total -->
+                            <span class="badge bg-primary fs-3">$<span id="total-carrito">0</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<script src="app-tarea.js"></script>
+</body>
+</html>
